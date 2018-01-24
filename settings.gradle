@@ -1,1 +1,1 @@
-include ':app', ':timerdialog2'
+include ':app', ':counterdialog'

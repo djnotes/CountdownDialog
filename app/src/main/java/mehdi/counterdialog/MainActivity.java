@@ -1,7 +1,9 @@
-package mehdi.timerdialog;
+package mehdi.counterdialog;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import mehdi.timerdialog.R;
 
 public class MainActivity extends AppCompatActivity {
 

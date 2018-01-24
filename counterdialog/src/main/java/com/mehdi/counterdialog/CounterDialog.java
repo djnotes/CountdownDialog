@@ -1,4 +1,4 @@
-package  mehdi.timerdialog;
+package  com.mehdi.counterdialog;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -23,7 +23,7 @@ import java.util.TimerTask;
 /**
  * My custom alert dialog class that is very simple and easy to work with
  */
-public class TimerDialog extends AlertDialog {
+public class CounterDialog extends AlertDialog {
 
     private String mMessage = "message";
     private AlertDialog.Builder mBuilder;
@@ -43,7 +43,7 @@ public class TimerDialog extends AlertDialog {
      */
     private Timer mTimer;
 
-    public TimerDialog(Context context, String message) {
+    public CounterDialog(Context context, String message) {
         super(context);
         mContext = context;
         mMessage = message;
@@ -55,7 +55,7 @@ public class TimerDialog extends AlertDialog {
      * @param message Message string resource
      * @param timeout timeout that will override the default timeout
      */
-    public TimerDialog(Context context,@StringRes  int message, int timeout) {
+    public CounterDialog(Context context, @StringRes  int message, int timeout) {
         super(context);
         mContext = context;
         mMessage = mContext.getString(message);
@@ -69,7 +69,7 @@ public class TimerDialog extends AlertDialog {
      * @param message Message string
      * @param timeout timeout that will override the default timeout
      */
-    public TimerDialog(Context context, String message, int timeout) {
+    public CounterDialog(Context context, String message, int timeout) {
         super(context);
         mContext = context;
         mMessage = message;
@@ -84,11 +84,11 @@ public class TimerDialog extends AlertDialog {
 //                .setTitle(R.string.message);
 //        mDialog = mBuilder.create();
 //        addContentView(mTimeLabel, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        ViewGroup content = (ViewGroup) LayoutInflater.from(mContext).inflate(R.layout.custom_dialog, null);
-        this.setView(content);
-        mTimeLabel = (TextView) LayoutInflater.from(mContext).inflate(R.layout.counter_view, null);
+//        ViewGroup content = (ViewGroup) LayoutInflater.from(mContext).inflate(R.layout.custom_dialog, null);
+//        this.setView(content);
+//        mTimeLabel = (TextView) LayoutInflater.from(mContext).inflate(R.layout.counter_view, null);
         setMessage(mMessage);
-        setTitle(R.string.message);
+        setTitle("title");
         addContentView(mTimeLabel, null);
 
 
